@@ -206,7 +206,7 @@ Patrick Mineault's [Good Research Code Handbook](https://goodresearch.dev/) is a
 
 ![](qr-code.png){fig-align="center"}
 
-[bit.ly/sehm-digital_projects](https://bit.ly/sehm-digital)
+[bit.ly/pjk_dig_proj](https://bit.ly/pjk_dig_proj)
 
 ## Help, I am overwhelmed! This is too much. My collaborators will never. . .
 
