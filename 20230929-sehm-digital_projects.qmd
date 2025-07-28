@@ -1,0 +1,222 @@
+---
+title: Reproducibility of Digital Research Projects
+author: "Jonas Kreutzer <br> [`pjkreutzer.github.io`]{.title-social}"
+date: 2025-07-28
+
+from: markdown+emoji
+bibliography: bibliography.bib
+
+format:
+  pjk_theme_revealjs-revealjs: 
+      embed-resources: true
+      code-overflow: wrap
+      code-copy: hover
+---
+
+# What to expect!
+
+1. stop losing orientation in your projects
+2. consistent execution of code
+3. FAIR data
+4. (mostly) tool agnostic, but opinionated
+
+# [01.]{.text-royal-blue-400} Project Set Up
+
+:::{style="font-size:5rem;"}
+```
+.
+├── analysis
+├── data
+│   ├── interim
+│   ├── processed
+│   └── raw
+├── docs
+└── results
+```
+:::
+
+:::{.fragment}
+**Tools that help:**
+
+[Cookiecutter](https://www.cookiecutter.io/) use templates or create your own, for example:
+
+````{.bash}
+ccds
+````
+
+[R devtools](https://devtools.r-lib.org/) similar for R
+:::
+
+:::{.notes}
+**Turing Way**
+The principles of a research compendium state that it should clearly separate Methods, Data, and Output. Phrased differently, this means we should distinguish between three types of files and folders:
+
+    Read-only: raw data (data_raw/), metadata (datapackage.json, CITATION)
+
+    Human-generated: code (clean_data.R, analyse_data.R), paper (paper.Rmd), documentation (README.md)
+
+    Project-generated: clean data (data_clean/), figures (figures/), other output
+
+:::
+
+## Use Good File Names 
+
+**:woman_technologist: Human readable** use descriptive names
+
+**:robot: Machine readable** use slug naming with regex in mind
+
+**:inbox_tray: Play well with default ordering**
+
+start at 01, use YYYYMMDD
+
+**** 
+
+### File Names Examples {.smaller}
+
+::::{.font-mono}
+:::{.fragment fragment-index=0}
+### :sob:
+
+old data.csv
+
+data_v2thisisthemostimportantworkingversinofourdataneverdelete _update second author.xslx
+
+figure.png
+:::
+
+:::{.fragment fragment-index=1}
+### :smiling_face_with_three_hearts:
+
+old_data.csv 
+
+20230929-raw_data.xslx
+ 
+Fig01-scatterplot_happy.png
+:::
+::::
+
+
+## [02.]{.text-royal-blue-400} Project Execution
+## Analysis as a DAG
+
+![Schematic of a research project. Image from @theturingwaycommunity2025TuringWayHandbook](https://book.the-turing-way.org/build/make-research-dag-736aa265dcd7d590baefae989176ed85.png){#fig-dag}
+
+:::{.fragment}
+**Tools that help:**
+
+[Quarto](https://quarto.org) an open-source scientific and technical publishing system
+
+[Make](https://www.gnu.org/software/make/) a build automation tool
+:::
+
+
+
+## Treat Your Data Like the Treasure it Is
+
+::: {.columns}
+::: {.column}
+Make it **FAIR**
+
+[**F**]{.text-royal-blue-400}indability, 
+
+[**A**]{.text-royal-blue-400}ccessibility, 
+
+[**I**]{.text-royal-blue-400}nteroperability and 
+
+[**R**]{.text-royal-blue-400}eusability of digital assets
+:::
+
+::: {.column}
+:::{.fragment}
+Raw data is **READ ONLY**
+
+Treat any output as disposable
+
+Separate functionality from execution
+
+Document what you do
+
+:::
+::: 
+:::
+
+
+:::{.notes}
+
+Findable: The first step in (re)using data is to find it! Descriptive metadata (information about the data such as keywords) is essential.
+
+Accessible: Once the user finds the data and software they need to know how to access it. Data could be openly available but it is also possible that authentication and authorisation procedures are necessary.
+
+Interoperable: Data needs to be integrated with other data and interoperate with applications or workflows.
+
+Reusable: Data should be well-described so that they can be used, combined, and extended in different settings.
+:::
+
+## Reproducible Environments
+
+"I don't know. It worked on my machine :shrug:"
+
+:::{style="font-size:12rem;"}
+:computer: :arrow_right: :package:
+:::
+
+:::{.fragment}
+**Tools that help:**
+
+| Package Management| Containers|
+|:----|:----|
+|[`pixi`](https://pixi.sh/latest/) | [`docker`](https://www.docker.com/) |
+|[`conda`](https://anaconda.org/anaconda/conda)||
+|[`uv`](https://docs.astral.sh/uv/) ||
+:::
+
+## [03.]{.text-royal-blue-400} Share your Project
+
+1. Decide what to share
+2. Choose a data repository
+3. Choose a license
+4. Upload data, metadata and documentation
+
+
+:::{.fragment}
+**Tools that help:**
+
+[FAIRsharing.org](https://fairsharing.org/databases) database registry
+
+[Zenodo](https://zenodo.org/)
+
+[Harvard Dataverse](https://dataverse.harvard.edu/)
+
+[choosealicense.com](https://choosealicense.com/)
+
+[github](github.com)
+[gitlab](gitlab.com)
+:::
+
+## Resources
+
+Much of the content discussed in this talk can be found in great detail at [The Turing Way -- Guide for Project Design](https://the-turing-way.netlify.app/project-design/project-design).
+
+[readme.so](https://readme.so/) for quickly creating README.md.
+
+Patrick Mineault's [Good Research Code Handbook](https://goodresearch.dev/) is a great resource for more computational focused workflows, so is [Nice R Code](https://nicercode.github.io/blog/2013-04-05-projects/).
+
+
+# Get this presentation
+
+![](qr-code.png){fig-align="center"}
+
+[bit.ly/sehm-digital_projects](https://bit.ly/sehm-digital)
+
+## Help, I am overwhelmed! This is too much. My collaborators will never. . .
+
+1. Start small (I suggest with project structure)
+
+2. Improve one file name at a time
+
+3. Set and communicate expectations clearly
+
+4. Fix small mistakes early
+
+:wave: [@pjkreutzer](https://linktr.ee/pjkreutzer){style="font-family:'Space Mono';"}
+
