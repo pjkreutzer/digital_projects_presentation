@@ -20,7 +20,7 @@ format:
 3. FAIR data
 4. (mostly) tool agnostic, but opinionated
 
-# [01.]{.text-royal-blue-400} Project Set Up
+## [01.]{.text-royal-blue-400} Project Set Up {.smaller}
 
 :::{style="font-size:5rem;"}
 ```
@@ -156,7 +156,7 @@ Reusable: Data should be well-described so that they can be used, combined, and 
 
 "I don't know. It worked on my machine :shrug:"
 
-:::{style="font-size:12rem;"}
+:::{style="font-size:10rem;"}
 :computer: :arrow_right: :package:
 :::
 
@@ -170,7 +170,7 @@ Reusable: Data should be well-described so that they can be used, combined, and 
 |[`uv`](https://docs.astral.sh/uv/) ||
 :::
 
-## [03.]{.text-royal-blue-400} Share your Project
+## [03.]{.text-royal-blue-400} Share your Project {.smaller}
 
 1. Decide what to share
 2. Choose a data repository
@@ -220,3 +220,5 @@ Patrick Mineault's [Good Research Code Handbook](https://goodresearch.dev/) is a
 
 :wave: [@pjkreutzer](https://linktr.ee/pjkreutzer){style="font-family:'Space Mono';"}
 
+
+## References {.refs}
